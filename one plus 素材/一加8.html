@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>一加8</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			a{text-decoration: none;}
+			header{
+				/* background: #0000FF; */
+				width: 100%;
+				height: 3.8vw;
+				display: flex;
+				justify-content: space-between;
+			}
+			.title img{
+				/* background: plum; */
+				height: 3.8vw;
+				margin-left: 6vw;
+			}
+			nav ul li {
+				/* background: yellow; */
+				font-family: "arial black";
+				font-size: 1vw;
+				line-height: 3.8vw;
+				text-align: center;
+			}
+			nav ul{
+				/* background: #0099FF; */
+				width: 35vw;
+				display: flex;
+				list-style-type: none;
+				justify-content: space-around;
+			}
+			nav{
+				/* background: red; */
+				width: 70vw;
+				display: flex;
+				justify-content: center;
+			}
+			nav ul li:hover{
+				border-bottom: .1vw solid red;
+			}
+			main{
+				width: 100%;
+				/* background: #0000FF; */
+			}
+			#m1,#m2{
+				width: 100%;
+				height: 10vw;
+				background: white;
+				text-align: center;
+				display: none;
+				position: absolute;
+				top:3.9vw;
+				left: 0;
+				
+			}
+			#m1 img{
+				padding-top: 2vw;
+			}
+			#m2 img{
+				padding-top: 2vw;
+			}
+			#x1{
+				width: 100%;
+				height: 19vw;
+				animation: one 12s infinite ;
+				background: url(0b2e9a7c-7720-476d-8300-d23c7f857a96.png ) no-repeat center;
+				background-size: 100%;
+				/* background-repeat: no-repeat;
+				background: cover; */
+			}
+			@keyframes one{
+				0%{
+					background: url(0b2e9a7c-7720-476d-8300-d23c7f857a96.png ) no-repeat center;
+					background-size: 100%;
+				}
+				23%{
+					background: url(0b2e9a7c-7720-476d-8300-d23c7f857a96.png ) no-repeat center;
+					background-size: 100%;
+				}
+				33%{
+					background: url(9cac1d8a-e4f5-48e4-aa2d-1469fa6e49d6.png ) no-repeat center;
+					background-size: 100%;
+				}
+				56%{
+					background: url(9cac1d8a-e4f5-48e4-aa2d-1469fa6e49d6.png ) no-repeat center;
+					background-size: 100%;
+				}
+				66%{
+					background: url(cbe9e46d-d157-4ea5-ba9c-5f05dce69b56.png) no-repeat center;
+					background-size: 100%;
+				}
+				89%{
+					background: url(cbe9e46d-d157-4ea5-ba9c-5f05dce69b56.png) no-repeat center;
+					background-size: 100%;
+				}
+				100%{
+					background: url(0b2e9a7c-7720-476d-8300-d23c7f857a96.png ) no-repeat center;
+					background-size: 100%;
+				}
+			}
+			.mac{
+				background: #0000FF;
+				background:url(jsad%20-%20副本.jpg);
+				background-size: 100%;
+				height: 12vw;
+				background-repeat: no-repeat;
+			}
+			#p1{
+				/* background: yellow; */
+				position: absolute;
+				margin-left: 21vw;
+				margin-top: 2vw;
+				font-size: 1.5vw;
+				font-family: "楷体";
+				color: white;
+			}
+			#p2{
+				/* background: red; */
+				position: absolute;
+				margin-left: 21vw;
+				margin-top: 5.5vw;
+				font-size:1vw;
+				font-family: "楷体";
+				color: white;
+			}
+			#p3{
+				width: 6vw;
+				/* background: red; */
+				position: absolute;
+				margin-left: 21vw;
+				margin-top: 9vw;
+				font-size: 1vw;
+				font-family: "楷体";
+			}
+			#p3 a{
+				color: white;
+			}
+			#p31{
+				display: inline-block;
+			}
+			#p32{
+				/* background: #0000FF; */
+				display: inline-block;
+			}
+			#p3 a:hover{
+				color: #CCCCCC;
+				text-decoration: underline;
+			}
+			#p3:hover #p32 {
+				transform: translateX(0.4vw);
+				transition: 1s;
+			}
+			#picture{
+				/* background: yellow; */
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.active1{
+				/* background: red; */
+				width: 46.5vw;
+				overflow: hidden;
+			}
+			#a1{
+				width: 46.5vw;
+				/* background: #0000FF; */
+				height: 19.1vw;
+				position: absolute;
+				margin-top: -19.1vw;
+				background: rgba(0,0,0,0);
+			}
+			.active2{
+				width: 46.5vw;
+				overflow: hidden;
+			}
+			#a2{
+				width: 46.5vw;
+				/* background: #0000FF; */
+				height: 19.1vw;
+				position: absolute;
+				margin-top: -19.1vw;
+				background: rgba(0,0,0,0);
+			}
+			.active3{
+				width: 46.5vw;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			#a3{
+				width: 46.5vw;
+				/* background: #0000FF; */
+				height: 19.1vw;
+				position: absolute;
+				margin-top: -19.1vw;
+				background: rgba(0,0,0,0);
+			}
+			#a31{
+				position: absolute;
+				margin-top: -17.5vw;
+				margin-left: 20vw;
+				color: white;
+				font-size: 1.5vw;
+				font-family: "楷体";
+			}
+			#a32{
+				position: absolute;
+				margin-top: -15vw;
+				margin-left: 8.5vw;
+				color: white;
+				font-size: 1.2vw;
+				font-family: "楷体";
+			}
+			#a41{
+				position: absolute;
+				margin-top: 6vw;
+				margin-left: 20.5vw;
+				color: white;
+				font-size: 1vw;
+				font-family: "楷体";
+			}
+			#a4 a{color: white;}
+			#a42{
+				width: 2vw;
+				/* background: #000000; */
+				position: absolute;
+				margin-top: 6vw;
+				margin-left: 24.7vw;
+				color: white;
+				font-size: 1vw;
+				font-family: "楷体";
+			}
+			#a41 a:hover{
+				color: #CCCCCC;
+				/* text-decoration: underline; */
+			}
+			.active3 :hover #a41{text-decoration: underline;}
+			#a4:hover #a42 {
+				transform: translateX(0.2vw);
+				transition: 1s;
+			}
+			#a4:hover #a41 {
+				transform: translateX(-0.2vw);
+				transition: 1s;
+			}
+			.active4{
+				width: 46.5vw;
+				overflow: hidden;
+			}
+			#a4{
+				width: 46.5vw;
+				/* background: #0000FF; */
+				height: 19.1vw;
+				position: absolute;
+				margin-top: -19.1vw;
+				background: rgba(0,0,0,0);
+			}
+			#picture img{
+				width: 46.5vw;
+			}
+			#active12{
+				width: 95.5vw;
+				height: 20vw;
+				/* background: #0099FF; */
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			#active34{
+				width: 95.5vw;
+				height: 20vw;
+				/* background: yellow; */
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.active1:hover #a1{
+				background: rgba(0,0,0,0.3);
+				transition: 1s;
+			}
+			.active1:hover img{
+				transform: scale(1.1);
+				transition: 1s;
+			}
+			.active2:hover #a2{
+				background: rgba(0,0,0,0.3);
+				transition: 1s;
+			}
+			.active2:hover img{
+				transform: scale(1.1);
+				transition: 1s;
+			}
+			.active3:hover #a3{
+				background: rgba(0,0,0,0.3);
+				transition: 1s;
+			}
+			.active3:hover img{
+				transform: scale(1.1);
+				transition: 1s;
+			}
+			.active4:hover #a4{
+				background: rgba(0,0,0,0.3);
+				transition: 1s;
+			}
+			.active4:hover img{
+				transform: scale(1.1);
+				transition: 1s;
+			}
+			#float{
+				height: 31vw;
+				background: gainsboro;
+				display: flex;
+				justify-content: center;
+			}
+			#f1{
+				/* background: yellow; */
+				width: 68%;
+				height: 31vw;
+				/* display: inline-block; */
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				/* padding-left: 100px; */
+				/* padding-right: 100px; */
+			}
+			#f1 img{
+				width: 20vw;
+				height: 10vw;
+			}
+			.act1,.act2,.act3{
+				background: white;
+				width: 20vw;
+				height: 22vw;
+			}
+			#pic1{
+				overflow: hidden;
+			}
+			#pic2{
+				overflow: hidden;
+			}
+			#pic3{
+				overflow: hidden;
+			}
+			#k1 #k2 #k3{
+				background: yellow;
+				padding-left: 5VW;
+			}
+			#f1 p{
+				font-family: "楷体";
+				font-size: 1vw;
+				margin-left: 0.9VW;
+				line-height: 2vw;
+			}
+			#f1 a{
+				text-decoration: none;
+				color: #0099CC;
+				display: block;
+				margin-top: 1vw;
+			}
+			.act1:hover img{
+				transform: scale(1.1);
+				transition: 0.5s;
+			}
+			.act2:hover img{
+				transform: scale(1.1);
+				transition: 0.5s;
+			}
+			.act3:hover img{
+				transform: scale(1.1);
+				transition: 0.5s;
+			}
+			.act1:hover{
+				box-shadow: 0 0 .5vw grey;
+			}
+			.act2:hover{
+				box-shadow: 0 0 .5vw grey;
+			}
+			.act3:hover{
+				box-shadow: 0 0 .5vw grey;
+			}
+			footer{
+				/* background: #EEEEEE; */
+				width: 100%;
+				height: 3.8vw;
+				display: flex;
+				justify-content: space-between;
+			}
+			#diey img{
+				/* background: plum;	 */
+				height: 3.8vw;
+				margin-left: 6vw;
+			}
+			#dexy ul li {
+				/* background: yellow; */
+				font-family: "arial black";
+				font-size: 0.9vw;
+				line-height: 3.8vw;
+				text-align: center;
+			}
+			#dexy ul{
+				/* background: #0099FF; */
+				width: 40vw;
+				display: flex;
+				list-style-type: none;
+				justify-content: space-around;
+			}
+			#dexy{
+				/* background: red; */
+				width: 70vw;
+				display: flex;
+				justify-content: center;
+				margin-left: 25vw;
+				margin-top: -4vw;
+			}
+			#diey{
+				margin-left: 15vw;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="title">
+				<img src="批注%202020-07-18%20235154.png">
+			</div>
+			<nav>
+				<ul>
+					<a href="https://www.oneplus.com/cn/8-pro?from=head"><li onmouseover="showbox()" onmouseout="hidebox()">8 系列 <div id="m1" ><img src="批注%202020-07-24%20102542.png" ></div></li></a>
+					<li onmouseover="show()" onmouseout="hide()">7T 系列 <div id="m2"><img src="批注%202020-07-24%20103047.png" ></div></li>
+					<li >7Pro</li>
+					<li >商城</li>
+					<li >品牌</li>
+					<li >服务</li>
+					<li >论坛</li>
+					<li >零售店</li>
+				</ul>
+			</nav>
+		</header><hr>
+		<main>
+			<div id="x1"></div>
+			<!-- <div id="x2">
+				<div id="biaodan">
+					<select>
+						<option value ="">精选商品</option>
+						<option value ="">手机</option>
+						<option value ="">耳机</option>
+						<option value ="">壳/膜</option>
+						<option value ="">适配器/数据线</option>
+						<option value ="">套装</option>
+						<option value ="">生活馆</option>
+					</select>
+				</div> -->
+			<!-- </div> -->
+			<div class="mac" >
+				<div class="mac1">
+					<p id="p1"><b>永不言弃，追求极致。</b></p>
+					<p id="p2">欢迎小罗伯特·唐尼，<br>加入 OnePlus 大家庭。</p>
+					<div id="p3">
+						<p id="p31"><a href="#">前往了解</a></p>
+						<p id="p32"><a href="">></a></p>
+					</div>
+				</div>
+			</div>
+			<div id="picture">
+				<div id="active12">
+					<div class="active1">
+						<img src="dfsgs.jpg" >
+						<div id="a1"></div>
+					</div>
+					<div class="active2">
+						<img src="sfasf.jpg" >
+						<div id="a2"></div>
+					</div>
+				</div>
+				<div id="active34">
+					<div class="active3">
+						<img src="teresg.jpg">
+						<div id="a3"></div>
+						<div>
+							<p id="a31"><b>教育优惠</b></p>
+							<p id="a32">认证学生、教师或教职员工身份，即可领取教育优惠卷</p>
+							<div id="a4">
+								<p id="a41"><a href="#">前往了解</a></p>
+								<p id="a42"><a href="">></a></p>
+							</div>
+						</div>
+					</div>
+					<div class="active4">
+						<img src="daa.jpg" >
+						<div id="a4"></div>
+					</div>
+				</div>
+			</div>
+			<div id="float">
+				<div id="f1">
+					<div class="act1">
+						<div id="pic1">
+							<img src="afdsa.jpg" >
+						</div>
+						<div id="k1">
+							<p>产品</p><br>
+							<p>One Plus 8系列来了,肉眼可见的出类拔萃</p><br>
+							<p><a href="">了解更多</a></p>
+						</div>
+					</div>
+					<div class="act2">
+						<div id="pic2">
+							<img src="fxtut.jpg" >
+						</div>
+							<div id="k2">
+								<p>口碑</p><br>
+								<p><b>One Plus 8怎么样,听听首批用户怎么说</b></p><br>
+								<p><a href="">了解更多</a></p>
+							</div>
+					</div>
+					<div class="act3">
+						<div id="pic3">
+							<img src="sdfszd.jpg">
+						</div>
+						<div id="k3">
+							<p>活动</p><br>
+							<p>秀出你的One Plus 8系列,花式开箱赢新机</p><br>
+							<p><a href="">了解更多</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div id="dection">
+				<div id="diey">
+					<img src="批注%202020-07-18%20235154.png" >
+				</div>
+				<div id="dexy">
+					<ul class="died">
+						<li>隐私政策</li>
+						<li>|</li>
+						<li>用户协议</li>
+						<li>|</li>
+						<li>竞赛规则</li>
+						<li>|</li>
+						<li>知识产权政策</li>
+						<li>|</li>
+						<li>安全问题反馈</li>
+						<li>|</li>
+						<li>站点地图</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		
+		<script type="text/javascript">
+			function showbox(){
+				document.getElementById("m1").style.display="block" 
+			}
+			function hidebox(){
+				document.getElementById("m1").style.display="none" 
+			}
+			function show(){
+				document.getElementById("m2").style.display="block" 
+			}
+			function hide(){
+				document.getElementById("m2").style.display="none" 
+			}
+		</script>
+	</body>
+</html>
